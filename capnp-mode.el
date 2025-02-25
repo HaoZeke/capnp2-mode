@@ -86,31 +86,14 @@
     (,capnp-annotation-regexp . ((1 font-lock-preprocessor-face) (2 font-lock-string-face)))
     (,(regexp-opt capnp-annotation-targets 'words) . font-lock-builtin-face)))
 
-;; Define simple indentation rules (indent by 2 spaces)
-(defun capnp-indent-line ()
-  "Indent current line of Cap'n Proto code."
-  (interactive)
-  (let ((indent-level 2)
-        cur-indent)
-    (save-excursion
-      (beginning-of-line)
-      ;; Handle opening/closing braces
-      (if (looking-at "^[ \t]*}") ;; Closing brace
-          (setq cur-indent (- (current-indentation) indent-level))
-        (if (looking-at "^[ \t]*{") ;; Opening brace
-            (setq cur-indent (+ (current-indentation) indent-level)))))
-    (if cur-indent
-        (indent-line-to (max cur-indent 0))
-      (indent-line-to 0))))
-
 ;; Define the major mode itself
-(define-derived-mode capnp-mode prog-mode "Cap'n Proto"
+(define-derived-mode capnp-mode c-mode "Cap'n Proto"
   "Major mode for editing Cap'n Proto schema files."
   :syntax-table capnp-mode-syntax-table
   (setq-local font-lock-defaults '((capnp-font-lock-keywords)))
   (setq-local comment-start "# ")
   (setq-local comment-end "")
-  (setq-local indent-line-function 'capnp-indent-line))
+  (setq-local indent-line-function 'c-indent-line))
 
 ;; Automatically use capnp-mode for .capnp files
 (add-to-list 'auto-mode-alist '("\\.capnp\\'" . capnp-mode))
