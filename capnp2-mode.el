@@ -14,9 +14,12 @@
 ;; This file is not part of GNU Emacs.
 ;;
 ;;; Commentary:
-;; translation of keywords and highlighting from vim [1] and [2] textmate
+;; translation of keywords and highlighting from vim [1] and [2] textmate along
+;; with the official repo [3] and another variant [4]
 ;; [1] https://github.com/cstrahan/vim-capnp
 ;; [2] https://github.com/textmate/capnproto.tmbundle/blob/master/Syntaxes/Cap%E2%80%99n%20Proto.tmLanguage
+;; [3] https://github.com/capnproto/capnproto/blob/v2/highlighting/emacs/capnp-mode.el
+;; [4] https://github.com/popham/capnp-mode/blob/master/capnp-mode.el
 
 ;; Put this in your .emacs file to enable autoloading of capnp2-mode
 ;; and auto-recognition of "*.capnp" files:
