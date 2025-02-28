@@ -76,10 +76,9 @@ patterns, e.g. for =in.*= and =*.lmp= files, add the following code to
 your =.emacs=:
 
 #+BEGIN_SRC emacs-lisp
-(autoload 'capnp2-mode "capnp2-mode.el" "CAPNP2 mode." t)
+(autoload 'capnp2-mode "capnp2-mode.el" "CAPNP mode." t)
 (setq auto-mode-alist (append auto-mode-alist
-                          '(("in\\." . capnp2-mode))
-                          '(("\\.lmp\\'" . capnp2-mode))
+                          '(("\\.capnp\\'" . capnp2-mode))
                           ))
 #+END_SRC
 

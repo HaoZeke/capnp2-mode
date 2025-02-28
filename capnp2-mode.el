@@ -5,8 +5,8 @@
 ;; Author: Rohit Goswami (HaoZeke) <rgoswami[at]inventati[dot]org>
 ;; Maintainer: Rohit Goswami (HaoZeke) <rgoswami[at]inventati[dot]org>
 ;; Created: October 08, 2024
-;; Modified: October 08, 2024
-;; Version: 0.0.1
+;; Modified: February 28, 2025
+;; Version: 0.0.2
 ;; Keywords: languages, faces
 ;; Homepage: https://github.com/HaoZeke/capnp2-mode
 ;; Package-Requires: ((emacs "24.3"))
@@ -19,11 +19,11 @@
 ;; [2] https://github.com/textmate/capnp2roto.tmbundle/blob/master/Syntaxes/Cap%E2%80%99n%20Proto.tmLanguage
 
 ;; Put this in your .emacs file to enable autoloading of capnp2-mode
-;; and auto-recognition of "*.capnp2" files:
+;; and auto-recognition of "*.capnp" files:
 ;;
-;; (autoload 'capnp2-mode "capnp2-mode.el" "CAPNP2 mode." t)
+;; (autoload 'capnp2-mode "capnp2-mode.el" "CAPNP mode." t)
 ;; (setq auto-mode-alist (append auto-mode-alist
-;;                               '(("\\.capnp2\\'" . capnp2-mode))
+;;                               '(("\\.capnp\\'" . capnp2-mode))
 ;;                               ))
 ;;
 ;;
