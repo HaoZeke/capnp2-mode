@@ -3,7 +3,7 @@
 :CUSTOM_ID: gnu-emacs-syntax-highlighting
 :END:
 
-A major mode based off ~prog-mode~ for basic syntax highlighting of Cap'n Proto
+A major mode based off ~c-mode~ for basic syntax highlighting of Cap'n Proto
 interface definition files.
 
 Updated and kept here for MELPA usage.
@@ -39,7 +39,7 @@ For example, with
 use the following:
 
 #+BEGIN_SRC emacs-lisp
-(use-package capnp-mode)
+(use-package capnp2-mode)
 #+END_SRC
 
 **** Manually
@@ -56,7 +56,7 @@ here]]):
 ;; Tell emacs where is your personal elisp lib dir
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 ;; load the package.
-(load "capnp-mode")
+(load "capnp2-mode")
 #+END_SRC
 
 *** Autoloading & Auto-recognition
@@ -64,22 +64,22 @@ here]]):
 :CUSTOM_ID: autoloading-auto-recognition
 :END:
 
-To automatically turn on the CAPNP mode for editing your input scripts,
+To automatically turn on the CAPNP2 mode for editing your input scripts,
 use the following line as the *first* line of your script:
 
 #+BEGIN_SRC emacs-lisp
-# -*- capnp -*-
+# -*- capnp2 -*-
 #+END_SRC
 
-For automatically switching on the CAPNP mode based on filename
+For automatically switching on the CAPNP2 mode based on filename
 patterns, e.g. for =in.*= and =*.lmp= files, add the following code to
 your =.emacs=:
 
 #+BEGIN_SRC emacs-lisp
-(autoload 'capnp-mode "capnp-mode.el" "CAPNP mode." t)
+(autoload 'capnp2-mode "capnp2-mode.el" "CAPNP2 mode." t)
 (setq auto-mode-alist (append auto-mode-alist
-                          '(("in\\." . capnp-mode))
-                          '(("\\.lmp\\'" . capnp-mode))
+                          '(("in\\." . capnp2-mode))
+                          '(("\\.lmp\\'" . capnp2-mode))
                           ))
 #+END_SRC
 
@@ -88,21 +88,18 @@ your =.emacs=:
 :CUSTOM_ID: status
 :END:
 
-By far not all commands are included in the syntax file
-(capnp-mode.el). You can easily add new ones to the existing classes.
-
 ** Implementation Details
 :PROPERTIES:
 :CUSTOM_ID: implementation-details
 :END:
 
-=capnp-mode= is derived from =prog-mode= which provides some
+=capnp2-mode= is derived from =c-mode= which provides some
 basic syntax highlighting of strings, comments, etc.
 
 The MELPA recipe used for this package is simply:
 
 #+BEGIN_SRC emacs-lisp
-(capnp-mode :fetcher github :repo "HaoZeke/capnp-mode")
+(capnp2-mode :fetcher github :repo "HaoZeke/capnp2-mode")
 #+END_SRC
 
 ** License
