@@ -32,12 +32,16 @@
 
 ;; Define keywords for Cap'n Proto
 (defvar capnp2-keywords
-  '("struct" "union" "enum" "interface" "const" "annotation" "using" "extends"))
+  '("struct" "enum" "interface" "union" "import"
+    "using" "const" "annotation" "extends" "in"
+    "of" "on" "as" "with" "from" "fixed"))
 
 ;; Define built-in types for Cap'n Proto
 (defvar capnp2-builtins
-  '("Void" "Bool" "Text" "Data" "List" "Int8" "Int16" "Int32" "Int64"
-    "UInt8" "UInt16" "UInt32" "UInt64" "Float32" "Float64" "union" "group"))
+  '("union" "group" "Void" "Bool" "Int8" "Int16"
+    "Int32" "Int64" "UInt8" "UInt16" "UInt32"
+    "UInt64" "Float32" "Float64" "Text" "Data"
+    "AnyPointer" "AnyStruct" "Capability" "List"))
 
 ;; Define constants (e.g., boolean literals) for Cap'n Proto
 (defvar capnp2-constants
