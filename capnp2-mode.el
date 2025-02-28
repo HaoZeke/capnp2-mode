@@ -15,8 +15,8 @@
 ;;
 ;;; Commentary:
 ;; translation of keywords and highlighting from vim [1] and [2] textmate
-;; [1] https://github.com/cstrahan/vim-capnp2
-;; [2] https://github.com/textmate/capnp2roto.tmbundle/blob/master/Syntaxes/Cap%E2%80%99n%20Proto.tmLanguage
+;; [1] https://github.com/cstrahan/vim-capnp
+;; [2] https://github.com/textmate/capnproto.tmbundle/blob/master/Syntaxes/Cap%E2%80%99n%20Proto.tmLanguage
 
 ;; Put this in your .emacs file to enable autoloading of capnp2-mode
 ;; and auto-recognition of "*.capnp" files:
